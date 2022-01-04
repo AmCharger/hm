@@ -258,3 +258,7 @@ footer a:hover {
 	color: var(--text-lightest) !important;
 	text-decoration: none !important;
 }
+
+.alignright {
+	float: right;
+}
