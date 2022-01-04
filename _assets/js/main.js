@@ -55,7 +55,6 @@ var options = {
 	},
 	retina_detect: false,
 };
-particlesJS("particle", options);
 
 function gS() {
 	$.getJSON("https://api.lanyard.rest/v1/users/645045981238394902", data => {
@@ -73,7 +72,6 @@ function gS() {
 gS();
 
 setInterval(gS, 10000);
-particlesJS("particle", options);
 $(() => {
 	$("#age").text(age);
 	particlesJS("particle", options);
