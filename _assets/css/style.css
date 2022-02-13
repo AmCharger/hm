@@ -48,11 +48,17 @@ header {
 }
 
 .logo {
-	transition: 0.2s ease;
+	transform: scale(1);
+	transition: 0.3s;
 }
 
 .logo:hover {
 	filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.35));
+	transform: scale(1.075) rotate(1deg);
+}
+
+.logo:active {
+	transform: scale(0.8);
 }
 
 ::selection {

@@ -28,3 +28,7 @@ $(() => {
 		console.log("callback - particles.js config loaded");
 	});
 });
+
+function scrollToTop() {
+	$(window).scrollTop(0);
+}
