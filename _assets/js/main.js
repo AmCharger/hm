@@ -1,10 +1,18 @@
-function calculateAge(dob, dt) {
-	dt = dt || new Date();
-	var diff = dt.getTime() - new Date(dob).getTime();
-	return Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-}
+function getAge() {
+	const bday = new Date("15 December 2006 00:01:00 PST");
+	const ageMs = Date.now() - bday.getTime();
 
-let age = calculateAge("2006-12-15");
+	const MILLISECOND = 1;
+	const SECOND = MILLISECOND * 1000;
+	const MINUTE = SECOND * 60;
+	const HOUR = MINUTE * 60;
+	const DAY = HOUR * 24;
+	const YEAR = DAY * 365;
+
+	let exact = ageMs / YEAR;
+
+	$("#age").html(`~${exact.toPrecision(7)}`);
+}
 
 function gS() {
 	$.getJSON("https://api.lanyard.rest/v1/users/645045981238394902", data => {
@@ -23,7 +31,7 @@ gS();
 
 setInterval(gS, 10000);
 $(() => {
-	$("#age").text(age);
+	getAge();
 	particlesJS.load("particles-js", "/_assets/particles.json", function () {
 		console.log("callback - particles.js config loaded");
 	});
