@@ -28,7 +28,7 @@ function gS(id) {
 		};
 		$("#pfp").attr(
 			"src",
-			`https://cdn.discordapp.com/avatars/${profile.id}/${profile.avatar}.${profile.type}`
+			`https://cdn.discordapp.com/avatars/${profile.id}/${profile.avatar}.${profile.type}?size=128`
 		);
 		if (data.active_on_discord_mobile && !data.active_on_discord_desktop) {
 			$("#online-status").html(`<span style="color: #F2A6AB">on Mobile</span>`);
