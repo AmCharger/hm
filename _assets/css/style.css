@@ -54,6 +54,7 @@ header {
 }
 
 .logo {
+	cursor: pointer;
 	transform: scale(1);
 	transition: 0.3s;
 }
@@ -132,13 +133,16 @@ a:hover {
 	height: 100%;
 	border-radius: 5px;
 }
+
 *::-webkit-scrollbar {
 	height: 0.5rem !important;
 	width: 0.5rem !important;
 }
+
 *::-webkit-scrollbar-thumb {
 	border-radius: 0.25rem !important;
 }
+
 *::-webkit-scrollbar-thumb {
 	background-color: var(--text-dark) !important;
 }
